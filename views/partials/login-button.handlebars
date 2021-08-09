@@ -1,0 +1,25 @@
+{{#if loggedIn}}
+	<form action='/logout' method='GET' style='margin: 0'>
+		<button type='submit' class='btn btn-danger'>
+			Logout
+		</button>
+	</form>
+{{else}}
+	<button
+		style='margin-right: 10px'
+		type='button'
+		class='btn btn-success'
+		data-bs-toggle='modal'
+		data-bs-target='#exampleModal'
+	>
+		Login
+	</button>
+	<button
+		type='button'
+		class='btn btn-primary'
+		data-bs-toggle='modal'
+		data-bs-target='#registerModal'
+	>
+		Registro
+	</button>
+{{/if}}

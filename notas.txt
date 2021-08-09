@@ -1,0 +1,14 @@
+Algunas indicaciones
+--------------------------------------------------------------------
+
+-La base de datos esta en ./arqcapone.sql
+-El codigo esta todo en index.js, ya que no me dio el tiempo para dividirlo mas prolijo.
+-Hay un usuario base de email= admin y pass= admin.
+-Por tema tiempo, todos los usuarios son admin (pueden alterar las tablas). Tambien el acceso a /admin-users y /admin-properties esta libre para todos, esto se podria arreglar muy facil chequeando la sesion.
+-Cuando te registras, debes hacer el login, no da feedback por ahora. Si no hay errores, es que el usuario se creo correctamente.
+-Me falto nodemailer y mejores chequeos de formularios, no hay valores minimos y se pueden introducir caracteres raros.
+
+Hay muchas cosas que se podria corregir la prolojidad, pero no hice a tiempo y ya quiero entregar. Por favor avisame si hay algo conceptualmente mal, o si ves que tengo que reforzar algo.
+
+Muchas gracias,
+Franco Capone

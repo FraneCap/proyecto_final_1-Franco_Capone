@@ -1,0 +1,12 @@
+<tr>
+	<th scope='row'>{{this.id}}</th>
+	<td>{{this.first_name}}</td>
+	<td>{{this.last_name}}</td>
+	<td>{{this.email}}</td>
+	<td>{{this.is_admin}}</td>
+	<td><form method='post' action='/admin-users/{{this.id}}'><button
+				type='submit'
+				class='btn btn-danger'
+				value="userId"
+			>Eliminar</button></form></td>
+</tr>

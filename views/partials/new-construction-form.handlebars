@@ -1,0 +1,46 @@
+<form method='POST' action='/new-construction' enctype="multipart/form-data">
+	<div class='form-group'>
+		<label for='exampleInputName'>Nombre:</label>
+		<input
+			required
+			type='name'
+			class='form-control'
+			id='newConstructionName'
+			placeholder='Ingrese el Nombre'
+            name='newConstructionName'
+		/>
+	</div>
+	<div class='form-group'>
+		<label for='exampleInputAddress'>Direccion:</label>
+		<input
+			required
+			type='address'
+			class='form-control'
+			id='newConstructionAddress'
+			placeholder='Ingrese la Direccion'
+            name='newConstructionAddress'
+		/>
+	</div>
+	<div class='form-group'>
+		<label for='exampleInputPrice'>Precio:</label>
+		<input
+			required
+			type='number'
+			class='form-control'
+			id='newConstructionPrice'
+			placeholder='Ingrese el Precio'
+            name='newConstructionPrice'
+		/>
+	</div>
+	<div class='form-group'>
+		<label for='exampleImgDirectory'>Subir foto de edificio</label>
+		<input
+			required
+			type='file'
+			class='form-control'
+			id='newConstructionImg_Directory'
+			name='newConstructionImg_Directory'
+		/>
+	</div>
+    <button type='submit' class='btn btn-primary' value='Upload'>Aceptar</button>
+</form>

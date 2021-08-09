@@ -1,0 +1,21 @@
+{{> navbar}}
+<h1 class="mt-5 mb-5 mx-auto" style="width: 700px">Panel de administracion - Usuarios</h1>
+<div>
+    <table class='table container-xl'>
+        <thead>
+            <tr>
+                <th scope='col'>ID</th>
+                <th scope='col'>Nombre</th>
+                <th scope='col'>Apellido</th>
+                <th scope='col'>Email</th>
+                <th scope='col'>Admin</th>
+                <th scope='col'>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each usersList}}
+                {{> user_table}}
+            {{/each}}
+        </tbody>
+    </table>
+</div>

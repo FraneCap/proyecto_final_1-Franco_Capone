@@ -1,0 +1,12 @@
+<tr>
+	<th scope='row'>{{this.id}}</th>
+	<td>{{this.name}}</td>
+	<td>{{this.address}}</td>
+	<td>{{this.price}}</td>
+	<td>{{this.img_directory}}</td>
+	<td><form method='post' action='/admin-properties/{{this.id}}'><button
+				type='submit'
+				class='btn btn-danger'
+				value='propertyId'
+			>Eliminar</button></form></td>
+</tr>

@@ -1,0 +1,25 @@
+{{> navbar}}
+<h1 class="mt-5 mb-5  mx-auto" style="width: 700px; text-align: center;">Panel de administracion - Propiedades</h1>
+<div>
+    <table class='table container-xl'>
+        <thead>
+            <tr>
+                <th scope='col'>ID</th>
+                <th scope='col'>Nombre</th>
+                <th scope='col'>Direccion</th>
+                <th scope='col'>Precio</th>
+                <th scope='col'>Ruta de imagen</th>
+                <th scope='col'>Accion</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each constructionData}}
+                {{> properties_table}}
+            {{/each}}
+        </tbody>
+    </table>
+    <div class='container-xl'>
+    <h2 class="mt-5 mb-5 mx-auto" style="width: 700px; text-align: center;">Agregar propiedad</h2>
+    {{> new-construction-form}}
+    </div>
+</div>

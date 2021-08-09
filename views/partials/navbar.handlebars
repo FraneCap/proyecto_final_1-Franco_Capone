@@ -1,0 +1,83 @@
+<nav class='navbar navbar-expand-lg navbar-light' style='background-color: #BEDADC;'>
+    <div class='container-fluid'>
+        <a class='navbar-brand' href='/'>Arq. Capone & Asoc</a>
+        <button class='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent'
+            aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation'>
+            <span class='navbar-toggler-icon'></span>
+        </button>
+        <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+            <ul class='navbar-nav me-auto mb-2 mb-lg-0'>
+                <li class='nav-item'>
+                    <a class='nav-link active' aria-current='page' href='/'>Home</a>
+                </li>
+                {{#if loggedIn}}
+                <li class='nav-item'>
+                    <a class='nav-link' href='/admin'>Admin</a>
+                </li>
+                {{/if}}
+            </ul>
+            {{> login-button }}
+        </div>
+    </div>
+</nav>
+
+<div class='modal fade' id='exampleModal' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
+    <div class='modal-dialog'>
+        <div class='modal-content'>
+            <div class='modal-header'>
+                <h5 class='modal-title' id='exampleModalLabel'>Login</h5>
+                <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+            </div>
+            <form action="/auth" method="POST">
+                <div class="input-field">
+                    <input type="text" name="email" id="email" placeholder="Email">
+                </div>
+                <div class="input-field">
+                    <input type="password" name="password" id="password" placeholder="Contraseña">
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cerrar</button>
+                    <button type='submit' class='btn btn-primary' value="LogIn">Aceptar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class='modal fade' id='registerModal' tabindex='-1' aria-labelledby='registerModalLabel' aria-hidden='true'>
+    <div class='modal-dialog'>
+        <div class='modal-content'>
+            <div class='modal-header'>
+                <h5 class='modal-title' id='exampleModalLabel'>Registro</h5>
+                <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+            </div>
+            <form method='POST' action='/new-user'>
+                <div class='form-group'>
+                    <label for='exampleInputFirstName'>Nombre:</label>
+                    <input required type='name' class='form-control' id='newUserFirstName'
+                        placeholder='Ingrese su Nombre' name='newUserFirstName' />
+                </div>
+                <div class='form-group'>
+                    <label for='exampleInputLastName'>Apellido:</label>
+                    <input required type='name' class='form-control' id='newUserLastName'
+                        placeholder='Ingrese su Apellido' name='newUserLastName' />
+                </div>
+                <div class='form-group'>
+                    <label for='exampleInputEmail'>Email:</label>
+                    <input required type='email' class='form-control' id='newUserEmail' placeholder='Ingrese su Email'
+                        name='newUserEmail' />
+                </div>
+
+                <div class='form-group'>
+                    <label for='exampleInputEmail'>Password:</label>
+                    <input required type='password' class='form-control' id='newUserPassword'
+                        placeholder='Ingrese su Constraseña' name='newUserPassword' />
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cerrar</button>
+                    <button type='submit' class='btn btn-primary' value="Upload">Aceptar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
